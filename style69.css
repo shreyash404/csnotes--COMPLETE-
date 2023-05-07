@@ -200,17 +200,25 @@ span{
 .menu-items li a:hover {
   margin: 3 3 3 3;
   border-radius: 5px;
-  background-color: #20252f;
+  /* background-color: #20252f; */
+}
+.menu-right a:hover{
+  letter-spacing: 0px;
+}
+.menu-item a:hover{
+  letter-spacing: 0px;
+
 }
 .menu-items li a:hover {
+  font-weight:600;
   padding: 0.1rem 0.2rem;
-  transition: all 0.3s ease-in-out;
-  transform: scale(1.05 );
+  transition: all 0.5s ease-in-out;
+  letter-spacing: 2px;
   color: #6d16cb;
 }
 .menu-items li a ul:hover ul {
   top: 70px;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   top: 0;
 }
 .fas fa-angle-down{
@@ -270,7 +278,7 @@ padding-top: -20px;
   justify-content: space-between;
   width: 100%;
 }
-.dropdown:focus-within .dropdown-menu {
+.dropdown:hover .dropdown-menu {
 
   padding: 0.1rem 0.2rem;
   transition: all 0.25s ease;
@@ -281,15 +289,16 @@ padding-top: -20px;
   opacity: 1;
   visibility: visible;
 }
-.dropdown:focus-within .dropdown-menu ul{
+.dropdown:hover .dropdown-menu ul{
+  transition: all .5s ease;
   top: 0;
 }
-.dropdown:focus-within .dropdown-menu ul{
+.dropdown:hover .dropdown-menu ul{
 transition: all .05s ease;
 top: 0;
 border-bottom-color:#6d16cb ;
 }
-.dropdown-right:focus-within .menu-right {
+.dropdown-right:hover .menu-right {
   background:0, 0, 0, .70;
   backdrop-filter: blur(50px);
   left: 100%;
@@ -302,6 +311,7 @@ border-bottom-color:#6d16cb ;
   transform:rotate(180deg) translate(4px, 5px);;
  
 }
+
 .header a:focus-within .fa-angle-down{
   transition: transform 0.1s ease-in;
   transform:rotate(180deg) translate(-25px, 0px);;
@@ -317,7 +327,7 @@ img{
 }
 
   /* Target the ::before pseudo-element of the link element */
-  .menu-items a::before {
+  .menu-items a::before:hover {
     content: attr(title); /* Use the value of the title attribute as the content */
     /* font-family: Arial, sans-serif; Set the font family */
     font-weight: 600;
